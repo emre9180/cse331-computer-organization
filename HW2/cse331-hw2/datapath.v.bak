@@ -1,0 +1,23 @@
+module datapath(input [31:0]product, input [15:0]multiplicand, input shft, write, add, output p0, output [31:0] newproduct);
+
+wire [31:0] outputp;
+wire [15:0] addOutput;
+wire [15:0] muxOutput;
+wire [31:0] productOutput;
+wire [31:0] shiftedOutput;
+wire [15:0] targetWrite;
+
+
+wire A = 1'b0;
+wire B;
+
+adder_16bit adder1(multiplicand, product[31:16], A, addOutput, B); // multiplicand ile product toplar wire'a bağlar
+mux_16bit_2x1 mux0(addOutput, product[31:16], add , targetWrite); // add sinyaline göre toplanmış hali veya ilk hali seçer
+
+mux_16bit_2x1 mux1(targetWrite, product[31:16], write, product[31:16]); // write sinyaline göre producti güncellemesini bekliyorum
+
+assign shiftedOutput = product >> 1'b0; // shift edlmiş halini wire'a bağla
+
+mux_32bit_2x1 mux2(shiftedOutput, product, shft, product); // shift sinyali gelirse producti yeni haliyle güncelle.
+
+endmodule

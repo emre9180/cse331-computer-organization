@@ -1,0 +1,22 @@
+module multiplier(input [31:0] product, input [15:0] multiplicand, input reset, input CLK, output [31:0] out);
+
+wire w1,w2,w3;
+wire add, shft, write;
+
+reg [31:0] productReg;
+initial
+	begin
+		productReg <= product; // producta buraya aktar
+	end
+
+
+controller ctrl1(reset, CLK, product[0], add, shft, write);
+
+
+datapath dp(productReg, multiplicand, shft, write, add, product[0], out[31:0]);
+
+// product reg güncelledim.
+
+
+// module datapath(input product[31:0], multiplicand[15:0], shft, write, add, output p0, newproduct[31:0]);
+endmodule
