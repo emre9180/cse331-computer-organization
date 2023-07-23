@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at control.v(33): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at control.v(11): object "final" differs only in case from object "FINAL" in the same scope

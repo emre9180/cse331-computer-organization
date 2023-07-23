@@ -1,0 +1,474 @@
+Analysis & Synthesis report for bonus_project
+Sun Jan 08 15:09:59 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |main|control:c0|current_state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 08 15:09:59 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; bonus_project                              ;
+; Top-level Entity Name              ; main                                       ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 193                                        ;
+;     Total combinational functions  ; 193                                        ;
+;     Dedicated logic registers      ; 65                                         ;
+; Total registers                    ; 65                                         ;
+; Total pins                         ; 88                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; main               ; bonus_project      ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/emrey/OneDrive/Masaüstü/bonus_project/main.v     ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/emrey/OneDrive/Masaüstü/bonus_project/datapath.v ;         ;
+; control.v                        ; yes             ; User Verilog HDL File  ; C:/Users/emrey/OneDrive/Masaüstü/bonus_project/control.v  ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 88               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; read~input       ;
+; Maximum fan-out          ; 128              ;
+; Total fan-out            ; 739              ;
+; Average fan-out          ; 1.70             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |main                      ; 193 (0)           ; 65 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 88   ; 0            ; |main               ; work         ;
+;    |control:c0|            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|control:c0    ; work         ;
+;    |datapath:d0|           ; 192 (192)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|datapath:d0   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main|control:c0|current_state                                                                                                            ;
++----------------------+---------------------+----------------------+---------------------+----------------------+--------------------+---------------------+
+; Name                 ; current_state.FINAL ; current_state.FOURTH ; current_state.THIRD ; current_state.SECOND ; current_state.INIT ; current_state.FIRST ;
++----------------------+---------------------+----------------------+---------------------+----------------------+--------------------+---------------------+
+; current_state.FIRST  ; 0                   ; 0                    ; 0                   ; 0                    ; 0                  ; 0                   ;
+; current_state.INIT   ; 0                   ; 0                    ; 0                   ; 0                    ; 1                  ; 1                   ;
+; current_state.SECOND ; 0                   ; 0                    ; 0                   ; 1                    ; 0                  ; 1                   ;
+; current_state.THIRD  ; 0                   ; 0                    ; 1                   ; 0                    ; 0                  ; 1                   ;
+; current_state.FOURTH ; 0                   ; 1                    ; 0                   ; 0                    ; 0                  ; 1                   ;
+; current_state.FINAL  ; 1                   ; 0                    ; 0                   ; 0                    ; 0                  ; 1                   ;
++----------------------+---------------------+----------------------+---------------------+----------------------+--------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; datapath:d0|w_add[0]                                ; read                ; yes                    ;
+; datapath:d0|w_add[1]                                ; read                ; yes                    ;
+; datapath:d0|w_add[2]                                ; read                ; yes                    ;
+; datapath:d0|w_add[3]                                ; read                ; yes                    ;
+; datapath:d0|w_add[4]                                ; read                ; yes                    ;
+; datapath:d0|w_add[5]                                ; read                ; yes                    ;
+; datapath:d0|w_add[6]                                ; read                ; yes                    ;
+; datapath:d0|w_add[7]                                ; read                ; yes                    ;
+; datapath:d0|w_add[8]                                ; read                ; yes                    ;
+; datapath:d0|w_add[9]                                ; read                ; yes                    ;
+; datapath:d0|w_add[10]                               ; read                ; yes                    ;
+; datapath:d0|w_add[11]                               ; read                ; yes                    ;
+; datapath:d0|w_add[12]                               ; read                ; yes                    ;
+; datapath:d0|w_add[13]                               ; read                ; yes                    ;
+; datapath:d0|w_add[14]                               ; read                ; yes                    ;
+; datapath:d0|w_add[15]                               ; read                ; yes                    ;
+; datapath:d0|w_add[16]                               ; read                ; yes                    ;
+; datapath:d0|w_add[17]                               ; read                ; yes                    ;
+; datapath:d0|w_add[18]                               ; read                ; yes                    ;
+; datapath:d0|w_add[19]                               ; read                ; yes                    ;
+; datapath:d0|w_add[20]                               ; read                ; yes                    ;
+; datapath:d0|w_add[21]                               ; read                ; yes                    ;
+; datapath:d0|w_add[22]                               ; read                ; yes                    ;
+; datapath:d0|w_add[23]                               ; read                ; yes                    ;
+; datapath:d0|w_add[24]                               ; read                ; yes                    ;
+; datapath:d0|w_add[25]                               ; read                ; yes                    ;
+; datapath:d0|w_add[26]                               ; read                ; yes                    ;
+; datapath:d0|w_add[27]                               ; read                ; yes                    ;
+; datapath:d0|w_add[28]                               ; read                ; yes                    ;
+; datapath:d0|w_add[29]                               ; read                ; yes                    ;
+; datapath:d0|w_add[30]                               ; read                ; yes                    ;
+; datapath:d0|w_add[31]                               ; read                ; yes                    ;
+; datapath:d0|w_add[32]                               ; read                ; yes                    ;
+; datapath:d0|w_add[33]                               ; read                ; yes                    ;
+; datapath:d0|w_add[34]                               ; read                ; yes                    ;
+; datapath:d0|w_add[35]                               ; read                ; yes                    ;
+; datapath:d0|w_add[36]                               ; read                ; yes                    ;
+; datapath:d0|w_add[37]                               ; read                ; yes                    ;
+; datapath:d0|w_add[38]                               ; read                ; yes                    ;
+; datapath:d0|w_add[39]                               ; read                ; yes                    ;
+; datapath:d0|w_add[40]                               ; read                ; yes                    ;
+; datapath:d0|w_add[41]                               ; read                ; yes                    ;
+; datapath:d0|w_add[42]                               ; read                ; yes                    ;
+; datapath:d0|w_add[43]                               ; read                ; yes                    ;
+; datapath:d0|w_add[44]                               ; read                ; yes                    ;
+; datapath:d0|w_add[45]                               ; read                ; yes                    ;
+; datapath:d0|w_add[46]                               ; read                ; yes                    ;
+; datapath:d0|w_add[47]                               ; read                ; yes                    ;
+; datapath:d0|w_add[48]                               ; read                ; yes                    ;
+; datapath:d0|w_add[49]                               ; read                ; yes                    ;
+; datapath:d0|w_add[50]                               ; read                ; yes                    ;
+; datapath:d0|w_add[51]                               ; read                ; yes                    ;
+; datapath:d0|w_add[52]                               ; read                ; yes                    ;
+; datapath:d0|w_add[53]                               ; read                ; yes                    ;
+; datapath:d0|w_add[54]                               ; read                ; yes                    ;
+; datapath:d0|w_add[55]                               ; read                ; yes                    ;
+; datapath:d0|w_add[56]                               ; read                ; yes                    ;
+; datapath:d0|w_add[57]                               ; read                ; yes                    ;
+; datapath:d0|w_add[58]                               ; read                ; yes                    ;
+; datapath:d0|w_add[59]                               ; read                ; yes                    ;
+; datapath:d0|w_add[60]                               ; read                ; yes                    ;
+; datapath:d0|w_add[61]                               ; read                ; yes                    ;
+; datapath:d0|w_add[62]                               ; read                ; yes                    ;
+; datapath:d0|w_add[63]                               ; read                ; yes                    ;
+; Number of user-specified and inferred latches = 64  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; datapath:d0|stop                       ; Stuck at VCC due to stuck port data_in ;
+; datapath:d0|pespese                    ; Lost fanout                            ;
+; datapath:d0|valid                      ; Lost fanout                            ;
+; control:c0|current_state.FIRST         ; Lost fanout                            ;
+; control:c0|current_state.SECOND        ; Lost fanout                            ;
+; control:c0|current_state.THIRD         ; Lost fanout                            ;
+; control:c0|current_state.FOURTH        ; Lost fanout                            ;
+; control:c0|current_state~2             ; Lost fanout                            ;
+; control:c0|current_state~3             ; Lost fanout                            ;
+; control:c0|current_state~4             ; Lost fanout                            ;
+; control:c0|current_state.INIT          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                           ;
++------------------+---------------------------+----------------------------------------+
+; Register name    ; Reason for Removal        ; Registers Removed due to This Register ;
++------------------+---------------------------+----------------------------------------+
+; datapath:d0|stop ; Stuck at VCC              ; datapath:d0|pespese, datapath:d0|valid ;
+;                  ; due to stuck port data_in ;                                        ;
++------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 65    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Jan 08 15:09:58 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bonus_project -c bonus_project
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file tb2.v
+    Info (12023): Found entity 1: tb2
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: tb
+Warning (10463): Verilog HDL Declaration warning at main.v(15): "final" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file main.v
+    Info (12023): Found entity 1: main
+Warning (10463): Verilog HDL Declaration warning at datapath.v(11): "final" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath
+Warning (10463): Verilog HDL Declaration warning at control.v(11): "final" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file control.v
+    Info (12023): Found entity 1: control
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:d0"
+Info (10041): Inferred latch for "w_add[0]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[1]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[2]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[3]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[4]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[5]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[6]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[7]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[8]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[9]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[10]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[11]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[12]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[13]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[14]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[15]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[16]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[17]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[18]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[19]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[20]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[21]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[22]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[23]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[24]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[25]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[26]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[27]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[28]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[29]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[30]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[31]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[32]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[33]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[34]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[35]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[36]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[37]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[38]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[39]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[40]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[41]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[42]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[43]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[44]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[45]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[46]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[47]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[48]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[49]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[50]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[51]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[52]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[53]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[54]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[55]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[56]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[57]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[58]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[59]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[60]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[61]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[62]" at datapath.v(155)
+Info (10041): Inferred latch for "w_add[63]" at datapath.v(155)
+Info (12128): Elaborating entity "control" for hierarchy "control:c0"
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/emrey/OneDrive/Masaüstü/bonus_project/output_files/bonus_project.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "cypher[0]"
+    Warning (15610): No output dependent on input pin "cypher[1]"
+    Warning (15610): No output dependent on input pin "cypher[2]"
+    Warning (15610): No output dependent on input pin "cypher[3]"
+    Warning (15610): No output dependent on input pin "cypher[4]"
+    Warning (15610): No output dependent on input pin "cypher[5]"
+    Warning (15610): No output dependent on input pin "cypher[6]"
+    Warning (15610): No output dependent on input pin "cypher[7]"
+    Warning (15610): No output dependent on input pin "cypher[8]"
+    Warning (15610): No output dependent on input pin "cypher[9]"
+    Warning (15610): No output dependent on input pin "cypher[10]"
+    Warning (15610): No output dependent on input pin "cypher[11]"
+    Warning (15610): No output dependent on input pin "cypher[12]"
+    Warning (15610): No output dependent on input pin "cypher[13]"
+    Warning (15610): No output dependent on input pin "cypher[14]"
+    Warning (15610): No output dependent on input pin "cypher[15]"
+Info (21057): Implemented 281 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 193 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Sun Jan 08 15:09:59 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/emrey/OneDrive/Masaüstü/bonus_project/output_files/bonus_project.map.smsg.
+
+
