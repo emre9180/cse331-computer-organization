@@ -1,0 +1,849 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do cse331_project_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_16bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module or_16bit
+# 
+# Top level modules:
+# 	or_16bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/not_16bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module not_16bit
+# 
+# Top level modules:
+# 	not_16bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/and_16bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module and_16bit
+# 
+# Top level modules:
+# 	and_16bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_32bit_2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_32bit_2x1
+# 
+# Top level modules:
+# 	mux_32bit_2x1
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_8x3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_1bit_8x3
+# 
+# Top level modules:
+# 	mux_1bit_8x3
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_1bit_2x1
+# 
+# Top level modules:
+# 	mux_1bit_2x1
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_16bit_2x1
+# 
+# Top level modules:
+# 	mux_16bit_2x1
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/full_adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_4bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder_4bit
+# 
+# Top level modules:
+# 	adder_4bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder_32bit
+# 
+# Top level modules:
+# 	adder_32bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_16bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder_16bit
+# 
+# Top level modules:
+# 	adder_16bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main_control
+# 
+# Top level modules:
+# 	main_control
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main_memory
+# 
+# Top level modules:
+# 	main_memory
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/register_memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_memory
+# 
+# Top level modules:
+# 	register_memory
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mips.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips
+# 
+# Top level modules:
+# 	mips
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_3bit_2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_3bit_2x1
+# 
+# Top level modules:
+# 	mux_3bit_2x1
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_8x3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_16bit_8x3
+# 
+# Top level modules:
+# 	mux_16bit_8x3
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_4bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module or_4bit
+# 
+# Top level modules:
+# 	or_4bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_6bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module or_6bit
+# 
+# Top level modules:
+# 	or_6bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_10bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module or_10bit
+# 
+# Top level modules:
+# 	or_10bit
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project {C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_22bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module or_22bit
+# 
+# Top level modules:
+# 	or_22bit
+# 
+vlog -reportprogress 300 -work work C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading work.mips
+# Loading work.or_6bit
+# Loading work.or_4bit
+# Loading work.or_16bit
+# Loading work.or_10bit
+# Loading work.or_22bit
+# Loading work.main_control
+# Loading work.mux_3bit_2x1
+# Loading work.mux_1bit_2x1
+# Loading work.main_memory
+# Loading work.register_memory
+# Loading work.mux_16bit_2x1
+# Loading work.alu
+# Loading work.not_16bit
+# Loading work.adder_16bit
+# Loading work.adder_4bit
+# Loading work.full_adder
+# Loading work.and_16bit
+# Loading work.mux_16bit_8x3
+# Loading work.mux_1bit_8x3
+# Loading work.adder_32bit
+# Loading work.mux_32bit_2x1
+add wave -position insertpoint  \
+sim:/tb/pc \
+sim:/tb/newPc \
+sim:/tb/instructions \
+sim:/tb/instruction \
+sim:/tb/clock
+add wave -position insertpoint  \
+sim:/tb/processor/zero_not \
+sim:/tb/processor/zero \
+sim:/tb/processor/targetRegAddr \
+sim:/tb/processor/shamt \
+sim:/tb/processor/rtgrb \
+sim:/tb/processor/rt_addr \
+sim:/tb/processor/rt \
+sim:/tb/processor/rsgrb \
+sim:/tb/processor/rs_addr \
+sim:/tb/processor/rs \
+sim:/tb/processor/reg_write_data \
+sim:/tb/processor/rd_addr \
+sim:/tb/processor/rd \
+sim:/tb/processor/plus4pc \
+sim:/tb/processor/pc_Output \
+sim:/tb/processor/pc \
+sim:/tb/processor/opcode \
+sim:/tb/processor/newPc \
+sim:/tb/processor/nPC_sel \
+sim:/tb/processor/memOutput \
+sim:/tb/processor/jumpAddr \
+sim:/tb/processor/jump \
+sim:/tb/processor/instruction \
+sim:/tb/processor/imm \
+sim:/tb/processor/func \
+sim:/tb/processor/cout \
+sim:/tb/processor/clock \
+sim:/tb/processor/clk \
+sim:/tb/processor/branch_w \
+sim:/tb/processor/branch_not \
+sim:/tb/processor/branchAddrT3 \
+sim:/tb/processor/branchAddrT2 \
+sim:/tb/processor/branchAddrT \
+sim:/tb/processor/branchAddr \
+sim:/tb/processor/branch \
+sim:/tb/processor/bne_w \
+sim:/tb/processor/beq_w \
+sim:/tb/processor/aluOutput \
+sim:/tb/processor/alu2ndinput \
+sim:/tb/processor/addr \
+sim:/tb/processor/RegWr \
+sim:/tb/processor/RegDst \
+sim:/tb/processor/MemtoReg \
+sim:/tb/processor/MemWr \
+sim:/tb/processor/MemRd \
+sim:/tb/processor/ALUSrc \
+sim:/tb/processor/ALUCtr
+add wave -position insertpoint  \
+sim:/tb/processor/mem1/writeData \
+sim:/tb/processor/mem1/readData \
+sim:/tb/processor/mem1/memdata \
+sim:/tb/processor/mem1/mem_write \
+sim:/tb/processor/mem1/mem_read \
+sim:/tb/processor/mem1/clock \
+sim:/tb/processor/mem1/address
+add wave -position insertpoint  \
+sim:/tb/processor/reg1/write_register \
+sim:/tb/processor/reg1/write_data \
+sim:/tb/processor/reg1/registers \
+sim:/tb/processor/reg1/regWrite \
+sim:/tb/processor/reg1/read_register2 \
+sim:/tb/processor/reg1/read_register1 \
+sim:/tb/processor/reg1/read_data2 \
+sim:/tb/processor/reg1/read_data1 \
+sim:/tb/processor/reg1/clock
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000000000010
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 1111111111111111
+# Before instruction the target register content: 1111111111111111
+# Instruction: 00000100000010111111111111111100, Rsaddr: 0000, Rtaddr: 0010, Rdaddr: 1111, ALURes: 1111111111111111, $Rs: 0000000000000000, $Rt:                 1111111111111111,PC : 0000000000000000, regw:1111111111111111, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:00001,regdest: 0010,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 1111111111111111
+# RD register content after instruction is done : 0001000000000111
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000100000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000001000000
+# Before instruction the target register content: 0000000001000000
+# Instruction: 00000010111011101100001000000000, Rsaddr: 1011, Rtaddr: 1011, Rdaddr: 1011, ALURes: 0000000100000000, $Rs: 0000000010000000, $Rt:                 0000000010000000,PC : 0000000000000001, regw:100000000, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  000,opcode:00000,regdest: 1011,clock :1
+# RS register content : 0000000010000000
+# RT register content after instruction is done : 0000000010000000
+# RD register content after instruction is done : 0000000010000000
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Instruction: 00010011101101000000000000001000, Rsaddr: 1110, Rtaddr: 1101, Rdaddr: 0000, ALURes: 0000000100001100, $Rs: 0000000010000110, $Rt:                 0000000010000110,PC : 0000000000000010, regw:100001100, memtoReg:0, mr:0, mw:0, branch:1, aluSrc:0, aluop:  000,opcode:00100,regdest: 1101,clock :1
+# RS register content : 0000000010000110
+# RT register content after instruction is done : 0000000010000110
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000001000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000110
+run
+# Before instruction, target memory content: 0000000000000110
+# Instruction: 00010111001101000000000000001000, Rsaddr: 1100, Rtaddr: 1101, Rdaddr: 0000, ALURes: 0000000010000110, $Rs: 0000000000000000, $Rt:                 0000000010000110,PC : 0000000000000101, regw:10000110, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  000,opcode:00101,regdest: 1101,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000010000110
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000010
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0001000000000111
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0001000000100010
+# Before instruction the target register content: 0001000000100010
+# Instruction: 00000000111010011100000110000000, Rsaddr: 0011, Rtaddr: 1010, Rdaddr: 0111, ALURes: 0001000000100010, $Rs: 0000000000100000, $Rt:                 0001000000000010,PC : 0000000000001000, regw:1000000100010, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  101,opcode:00000,regdest: 0111,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0001000000000010
+# RD register content after instruction is done : 0001000000100010
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+run
+# Before instruction, target memory content: 0000000000000000
+# Instruction: 00001000000011000000000000000000, Rsaddr: 0000, Rtaddr: 0011, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000000000, $Rt:                 0000000000100000,PC : 0000000000001001, regw:100000, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  000,opcode:00010,regdest: 0011,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000100000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000001
+# Before instruction the target register content: 0000000010000110
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000001
+# Before instruction the target register content: 0000000011100001
+# Before instruction the target register content: 0000000011100001
+# Instruction: 00000010000011011000001000100000, Rsaddr: 1000, Rtaddr: 0011, Rdaddr: 0110, ALURes: 0000000011100001, $Rs: 0000000100000001, $Rt:                 0000000000100000,PC : 0000000000001100, regw:11100001, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  001,opcode:00000,regdest: 0110,clock :1
+# RS register content : 0000000100000001
+# RT register content after instruction is done : 0000000000100000
+# RD register content after instruction is done : 0000000011100001
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+run
+# Before instruction, target memory content: 0000000000000000
+# Instruction: 00001100000100000000000000000000, Rsaddr: 0000, Rtaddr: 0100, Rdaddr: 0000, ALURes: 0000000000000000, $Rs: 0000000000000000, $Rt:                 0000000000000000,PC : 0000000000001101, regw:0, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  000,opcode:00011,regdest: 0100,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000001000001
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000100000001
+# Before instruction the target register content: 0000000100000001
+# Instruction: 00000001011000100100001001000000, Rsaddr: 0101, Rtaddr: 1000, Rdaddr: 1001, ALURes: 0000000100000001, $Rs: 0000000100000101, $Rt:                 0000000100000001,PC : 0000000000010000, regw:100000001, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  100,opcode:00000,regdest: 1001,clock :1
+# RS register content : 0000000100000101
+# RT register content after instruction is done : 0000000100000001
+# RD register content after instruction is done : 0000000100000001
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000100000001
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000100000001
+# Before instruction the target register content: 0000000100000001
+# Instruction: 00110010001000100110011001111100, Rsaddr: 1000, Rtaddr: 1000, Rdaddr: 1001, ALURes: 0000000100000001, $Rs: 0000000100000001, $Rt:                 0000000100000001,PC : 0000000000010001, regw:100000001, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:1, aluop:  100,opcode:01100,regdest: 1000,clock :1
+# RS register content : 0000000100000001
+# RT register content after instruction is done : 0000000100000001
+# RD register content after instruction is done : 0000000100000001
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000100000101
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 1111110110011101
+# Before instruction the target register content: 1111110110011101
+# Instruction: 00110101010101111111011001110000, Rsaddr: 0101, Rtaddr: 0101, Rdaddr: 1111, ALURes: 1111110110011101, $Rs: 1111110110011101, $Rt:                 1111110110011101,PC : 0000000000010010, regw:1111110110011101, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:1, aluop:  101,opcode:01101,regdest: 0101,clock :1
+# RS register content : 1111110110011101
+# RT register content after instruction is done : 1111110110011101
+# RD register content after instruction is done : 0001000000000111
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000010000110
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 1001000000000000
+# Before instruction the target register content: 1001000000000000
+# Instruction: 00100001001110100100000000000000, Rsaddr: 0100, Rtaddr: 1110, Rdaddr: 1001, ALURes: 1001000000000000, $Rs: 0000000000000000, $Rt:                 1001000000000000,PC : 0000000000010011, regw:1001000000000000, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:01000,regdest: 1110,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 1001000000000000
+# RD register content after instruction is done : 0000000100000001
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 1111111111111111
+# Before instruction the target register content: 1111111111111111
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Instruction: 10001100110010000000000000000000, Rsaddr: 0011, Rtaddr: 0010, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000100000, $Rt:                 0000000000000000,PC : 0000000000010100, regw:0, memtoReg:1, mr:1, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:100011,regdest: 0010,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+run
+# Before instruction, target memory content: 0000000000100000
+# Instruction: 10101100110011000000000000000000, Rsaddr: 0011, Rtaddr: 0011, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000100000, $Rt:                 0000000000100000,PC : 0000000000010101, regw:100000, memtoReg:0, mr:1, mw:1, branch:0, aluSrc:1, aluop:  000,opcode:101011,regdest: 0011,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000000100000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000100000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000100000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000010000000
+# Before instruction the target register content: 0000000010000000
+# Instruction: 00000000000011001100100000000000, Rsaddr: 0000, Rtaddr: 0011, Rdaddr: 0011, ALURes: 0000100000000000, $Rs: 0000000000000000, $Rt:                 0000001000000000,PC : 0000000000010110, regw:100000000000, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  011,opcode:00000,regdest: 0011,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000001000000000
+# RD register content after instruction is done : 0000001000000000
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0001000000000010
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000100000000001
+# Before instruction the target register content: 0000100000000001
+# Instruction: 00000000001010101000010000100000, Rsaddr: 0000, Rtaddr: 1010, Rdaddr: 1010, ALURes: 0000001000000000, $Rs: 0000000000000000, $Rt:                 0000010000000000,PC : 0000000000010111, regw:1000000000, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  111,opcode:00000,regdest: 1010,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000010000000000
+# RD register content after instruction is done : 0000010000000000
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: xxxxxxxxxxxxxxx1
+# Before instruction the target register content: xxxxxxxxxxxxxxx1
+# Instruction: 00000000100011110000001010100000, Rsaddr: 0010, Rtaddr: 0011, Rdaddr: 1100, ALURes: xxxxxxxxxxxxxxx1, $Rs: 0000000000000000, $Rt:                 0000001000000000,PC : 0000000000011000, regw:x1, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  110,opcode:00000,regdest: 1100,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000001000000000
+# RD register content after instruction is done : xxxxxxxxxxxxxxx1
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Instruction: 00000000000000000000000000000000, Rsaddr: 0000, Rtaddr: 0000, Rdaddr: 0000, ALURes: 0000000000000000, $Rs: 0000000000000000, $Rt:                 0000000000000000,PC : 0000000000011001, regw:0, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  011,opcode:00000,regdest: 0000,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Instruction: 00000000000000000000000000000000, Rsaddr: 0000, Rtaddr: 0000, Rdaddr: 0000, ALURes: 0000000000000000, $Rs: 0000000000000000, $Rt:                 0000000000000000,PC : 0000000000011010, regw:0, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  011,opcode:00000,regdest: 0000,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+vlog -reportprogress 300 -work work C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb2.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb2
+# 
+# Top level modules:
+# 	tb2
+vlog -reportprogress 300 -work work C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb3.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb3
+# 
+# Top level modules:
+# 	tb3
+vsim -voptargs=+acc work.tb2
+# vsim -voptargs=+acc work.tb2 
+# Loading work.tb2
+# Loading work.mips
+# Loading work.or_6bit
+# Loading work.or_4bit
+# Loading work.or_16bit
+# Loading work.or_10bit
+# Loading work.or_22bit
+# Loading work.main_control
+# Loading work.mux_3bit_2x1
+# Loading work.mux_1bit_2x1
+# Loading work.main_memory
+# Loading work.register_memory
+# Loading work.mux_16bit_2x1
+# Loading work.alu
+# Loading work.not_16bit
+# Loading work.adder_16bit
+# Loading work.adder_4bit
+# Loading work.full_adder
+# Loading work.and_16bit
+# Loading work.mux_16bit_8x3
+# Loading work.mux_1bit_8x3
+# Loading work.adder_32bit
+# Loading work.mux_32bit_2x1
+# WARNING: No extended dataflow license exists
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000010
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Instruction: 10001100110010000000000000000000, Rsaddr: 0011, Rtaddr: 0010, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000100000, $Rt:                 0000000000000000,PC : 0000000000000000, regw:0, memtoReg:1, mr:1, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:100011,regdest: 0010,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000111111111
+# Before instruction the target register content: 0000000111111111
+# Instruction: 00100000100100000000011111111100, Rsaddr: 0010, Rtaddr: 0100, Rdaddr: 0000, ALURes: 0000000111111111, $Rs: 0000000000000000, $Rt:                 0000000111111111,PC : 0000000000000001, regw:111111111, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:01000,regdest: 0100,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000111111111
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+run
+# Before instruction, target memory content: 0000000111111111
+# Instruction: 10101100110100000000000000000000, Rsaddr: 0011, Rtaddr: 0100, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000100000, $Rt:                 0000000111111111,PC : 0000000000000010, regw:100000, memtoReg:0, mr:1, mw:1, branch:0, aluSrc:1, aluop:  000,opcode:101011,regdest: 0100,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000111111111
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000111111111
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Instruction: 00000000000000000000000000000000, Rsaddr: 0000, Rtaddr: 0000, Rdaddr: 0000, ALURes: 0000000000000000, $Rs: 0000000000000000, $Rt:                 0000000000000000,PC : 0000000000000011, regw:0, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  011,opcode:00000,regdest: 0000,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+vsim -voptargs=+acc work.tb3
+# vsim -voptargs=+acc work.tb3 
+# Loading work.tb3
+# Loading work.mips
+# Loading work.or_6bit
+# Loading work.or_4bit
+# Loading work.or_16bit
+# Loading work.or_10bit
+# Loading work.or_22bit
+# Loading work.main_control
+# Loading work.mux_3bit_2x1
+# Loading work.mux_1bit_2x1
+# Loading work.main_memory
+# Loading work.register_memory
+# Loading work.mux_16bit_2x1
+# Loading work.alu
+# Loading work.not_16bit
+# Loading work.adder_16bit
+# Loading work.adder_4bit
+# Loading work.full_adder
+# Loading work.and_16bit
+# Loading work.mux_16bit_8x3
+# Loading work.mux_1bit_8x3
+# Loading work.adder_32bit
+# Loading work.mux_32bit_2x1
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/tb3/pc \
+sim:/tb3/newPc \
+sim:/tb3/instructions \
+sim:/tb3/instruction \
+sim:/tb3/clock
+add wave -position insertpoint  \
+sim:/tb3/processor/reg1/write_register \
+sim:/tb3/processor/reg1/write_data \
+sim:/tb3/processor/reg1/registers \
+sim:/tb3/processor/reg1/regWrite \
+sim:/tb3/processor/reg1/read_register2 \
+sim:/tb3/processor/reg1/read_register1 \
+sim:/tb3/processor/reg1/read_data2 \
+sim:/tb3/processor/reg1/read_data1 \
+sim:/tb3/processor/reg1/clock
+run
+# Before instruction, target memory content: 0000000000000001
+# Before instruction the target register content: 0000000000000010
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000001
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Instruction: 10001100110010000000000000000100, Rsaddr: 0011, Rtaddr: 0010, Rdaddr: 0000, ALURes: 0000000000100001, $Rs: 0000000000100000, $Rt:                 0000000000000001,PC : 0000000000000000, regw:1, memtoReg:1, mr:1, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:100011,regdest: 0010,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000000000001
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000001
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000010
+# Before instruction the target register content: 0000000000100000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000011
+# Before instruction the target register content: 0000000000000001
+# Before instruction the target register content: 0000000000000001
+# Instruction: 10001100110011000000000000001000, Rsaddr: 0011, Rtaddr: 0011, Rdaddr: 0000, ALURes: 0000000000000100, $Rs: 0000000000000010, $Rt:                 0000000000000010,PC : 0000000000000001, regw:11, memtoReg:1, mr:1, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:100011,regdest: 0011,clock :1
+# RS register content : 0000000000000010
+# RT register content after instruction is done : 0000000000000010
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000100
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000011
+# Before instruction the target register content: 0000000100000001
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000011
+# Before instruction the target register content: 0000000000000011
+# Before instruction the target register content: 0000000000000011
+# Instruction: 00000000100011100000001000000000, Rsaddr: 0010, Rtaddr: 0011, Rdaddr: 1000, ALURes: 0000000000000011, $Rs: 0000000000000001, $Rt:                 0000000000000010,PC : 0000000000000010, regw:11, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  000,opcode:00000,regdest: 1000,clock :1
+# RS register content : 0000000000000001
+# RT register content after instruction is done : 0000000000000010
+# RD register content after instruction is done : 0000000000000011
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Instruction: 00000000000000000000000000000000, Rsaddr: 0000, Rtaddr: 0000, Rdaddr: 0000, ALURes: 0000000000000000, $Rs: 0000000000000000, $Rt:                 0000000000000000,PC : 0000000000000011, regw:0, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  011,opcode:00000,regdest: 0000,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+vsim -voptargs=+acc work.tb2
+# vsim -voptargs=+acc work.tb2 
+# Loading work.tb2
+# Loading work.mips
+# Loading work.or_6bit
+# Loading work.or_4bit
+# Loading work.or_16bit
+# Loading work.or_10bit
+# Loading work.or_22bit
+# Loading work.main_control
+# Loading work.mux_3bit_2x1
+# Loading work.mux_1bit_2x1
+# Loading work.main_memory
+# Loading work.register_memory
+# Loading work.mux_16bit_2x1
+# Loading work.alu
+# Loading work.not_16bit
+# Loading work.adder_16bit
+# Loading work.adder_4bit
+# Loading work.full_adder
+# Loading work.and_16bit
+# Loading work.mux_16bit_8x3
+# Loading work.mux_1bit_8x3
+# Loading work.adder_32bit
+# Loading work.mux_32bit_2x1
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/tb2/pc \
+sim:/tb2/newPc \
+sim:/tb2/instructions \
+sim:/tb2/instruction \
+sim:/tb2/clock
+add wave -position insertpoint  \
+sim:/tb2/processor/mem1/writeData \
+sim:/tb2/processor/mem1/readData \
+sim:/tb2/processor/mem1/memdata \
+sim:/tb2/processor/mem1/mem_write \
+sim:/tb2/processor/mem1/mem_read \
+sim:/tb2/processor/mem1/clock \
+sim:/tb2/processor/mem1/address
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000010
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+# Instruction: 10001100110010000000000000000000, Rsaddr: 0011, Rtaddr: 0010, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000100000, $Rt:                 0000000000000000,PC : 0000000000000000, regw:0, memtoReg:1, mr:1, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:100011,regdest: 0010,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: xxxxxxxxxxxxxxxx
+# Before instruction the target register content: 0000000111111111
+# Before instruction the target register content: 0000000111111111
+# Instruction: 00100000100100000000011111111100, Rsaddr: 0010, Rtaddr: 0100, Rdaddr: 0000, ALURes: 0000000111111111, $Rs: 0000000000000000, $Rt:                 0000000111111111,PC : 0000000000000001, regw:111111111, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:1, aluop:  000,opcode:01000,regdest: 0100,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000111111111
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : xxxxxxxxxxxxxxxx
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+run
+# Before instruction, target memory content: 0000000111111111
+# Instruction: 10101100110100000000000000000000, Rsaddr: 0011, Rtaddr: 0100, Rdaddr: 0000, ALURes: 0000000000100000, $Rs: 0000000000100000, $Rt:                 0000000111111111,PC : 0000000000000010, regw:100000, memtoReg:0, mr:1, mw:1, branch:0, aluSrc:1, aluop:  000,opcode:101011,regdest: 0100,clock :1
+# RS register content : 0000000000100000
+# RT register content after instruction is done : 0000000111111111
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000111111111
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: xxxxxxxxxxxxxxxx
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Instruction: 00000000000000000000000000000000, Rsaddr: 0000, Rtaddr: 0000, Rdaddr: 0000, ALURes: 0000000000000000, $Rs: 0000000000000000, $Rt:                 0000000000000000,PC : 0000000000000011, regw:0, memtoReg:0, mr:0, mw:0, branch:0, aluSrc:0, aluop:  011,opcode:00000,regdest: 0000,clock :1
+# RS register content : 0000000000000000
+# RT register content after instruction is done : 0000000000000000
+# RD register content after instruction is done : 0000000000000000
+# Memory content -if there is a load or store op- after instruction is done : 0000000000000000
+# 
+# 
+# 
+run
+# Before instruction, target memory content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
+# Before instruction the target register content: 0000000000000000
