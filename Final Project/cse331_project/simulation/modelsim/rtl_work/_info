@@ -1,0 +1,502 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\emrey\OneDrive\Masaüstü\cse331_project\simulation\modelsim
+vadder_16bit
+I?@SC3c8:oj3?dFiFZG8_j1
+VU6ndb[8;YiO@jB5I`I;W_3
+Z1 dC:\Users\emrey\OneDrive\Masaüstü\cse331_project\simulation\modelsim
+w1670421264
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_16bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_16bit.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project -O0
+!i10b 1
+!s100 KlzD[e3AGO@IEoMbT4c4b2
+!s85 0
+!s108 1673983901.446000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_16bit.v|
+!s101 -O0
+vadder_32bit
+IOX8H47AeMLnTfI_iMb7fg1
+VTRWNc`V>NIJ0ZO6QCDABY0
+R1
+w1670520529
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_32bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_32bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ATQPkdJM0;EC?BI6gzhcg1
+!s85 0
+!s108 1673983901.356000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_32bit.v|
+!s101 -O0
+vadder_4bit
+I2RMD1f>i>T7Me;9eE^F4Q3
+VoWXK2VI7E2EnfHE>EC^VK1
+R1
+w1670421221
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_4bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_4bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 LG`A3BA0jRbLl0ZFQG9;L2
+!s85 0
+!s108 1673983901.279000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_4bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_4bit.v|
+!s101 -O0
+valu
+IdPiaP]f`>`?]KgEEF`NQF0
+V7EYcPZ1VkRgJOIE`Dd2QP1
+R1
+w1673812856
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/alu.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/alu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 4JPWigbM33GKVeP:R;=>o1
+!s85 0
+!s108 1673983901.145000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/alu.v|
+!s101 -O0
+vand_16bit
+IH140EY;JSW@4NR5;l_`kl0
+V>NmY9bAOz9DF^3DVTT4?h0
+R1
+w1673726641
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/and_16bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/and_16bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 E^Bk56jo1l1bhzBfP]KaI0
+!s85 0
+!s108 1673983900.708000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/and_16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/and_16bit.v|
+!s101 -O0
+vfull_adder
+IUcB<zI_Mj0d^mflCEHcLM1
+VO[Hg?Ff6Ez1z9?GbWlDO91
+R1
+w1670421384
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/full_adder.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/full_adder.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 M_9m4hloI2]mNVzASdVig0
+!s85 0
+!s108 1673983901.045000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/full_adder.v|
+!s101 -O0
+vmain_control
+I87FACH>5]55kb6gan0OhJ1
+VGOQNg<2fj;>=[mnQ[4<VO2
+R1
+w1673896003
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_control.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_control.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 CYRRab19c4OHRD`<NiL9@3
+!s85 0
+!s108 1673983901.532000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_control.v|
+!s101 -O0
+vmain_memory
+IH]KZQK9Y[zZ?C42`8_<Xz0
+VXnWNAB6kKgUV]USdR@?SO0
+R1
+w1673924151
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_memory.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_memory.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 d[>YmFJ7Na5_[g;?@8h5`1
+!s85 0
+!s108 1673983901.661000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_memory.v|
+!s101 -O0
+vmips
+I6F_R;FiO@o]c]93LQ878i2
+V^fYc@kJ^5O^DifL8^Zgd<3
+R1
+w1673922685
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mips.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mips.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 f3VAi2gg2e7ge0>fE5R9E3
+!s85 0
+!s108 1673983901.845000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mips.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mips.v|
+!s101 -O0
+vmux_16bit_2x1
+I1958z0=@nk?APnYReOzc63
+Ve5j2jz]7LndlA7WP1]Bd30
+R1
+w1670421449
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_2x1.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_2x1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 UG6[6CKe6C42Xdkl@@FBe0
+!s85 0
+!s108 1673983900.959000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_2x1.v|
+!s101 -O0
+vmux_16bit_8x3
+I5bjMNQDQEOclD_5]Md0HY2
+V`Fzl2z6LEYlnmEm0WH[H]0
+R1
+w1673773752
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_8x3.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_8x3.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 RRHf^Hn6D;4G?<j87i`Zj0
+!s85 0
+!s108 1673983902.021000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_8x3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_8x3.v|
+!s101 -O0
+vmux_1bit_2x1
+I1Mj^3ZznX5:WaQ5]YYol`3
+VX?S8GAkheH_P1S^A60UiZ2
+R1
+w1670513421
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_2x1.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_2x1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 1NHk[f>LBYWn;:KI_R0NQ3
+!s85 0
+!s108 1673983900.888000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_2x1.v|
+!s101 -O0
+vmux_1bit_8x3
+Im4_>^K[1OJBYc64UbeRB=1
+VLoIB[fBn514Ig<_Bh7AKU3
+R1
+w1670519615
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_8x3.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_8x3.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 SzTI86cgSWdn08Ta45YHH3
+!s85 0
+!s108 1673983900.820000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_8x3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_8x3.v|
+!s101 -O0
+vmux_32bit_2x1
+I4MJb[1bjTMjhYlZhZ`UO^2
+VPOmNikj4ah_c5C1J8M8fN0
+R1
+w1670421469
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_32bit_2x1.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_32bit_2x1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 QVFEbWIU`ejTz>k_E1YzN0
+!s85 0
+!s108 1673983900.760000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_32bit_2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_32bit_2x1.v|
+!s101 -O0
+vmux_3bit_2x1
+I?dD3JJHDd>4`Lk09PokgY1
+V?Oa^GafbARzmm`HI[`MDZ1
+R1
+w1673774487
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_3bit_2x1.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_3bit_2x1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 c?Rob9?46X6X5AKm^?bDT1
+!s85 0
+!s108 1673983901.930000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_3bit_2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_3bit_2x1.v|
+!s101 -O0
+vnot_16bit
+I7ceG]S<c3@6gM>67RP??<0
+VcYfDUSR@KYl=e<=?M2EMQ0
+R1
+w1673729229
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/not_16bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/not_16bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 cZ_NJHJ8bR<D6hNbD8d7E1
+!s85 0
+!s108 1673983900.643000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/not_16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/not_16bit.v|
+!s101 -O0
+vor_10bit
+IKKzCFNKzd1ck`f]MS7e1D1
+V5F;8i5Y1KInh2e`Im?22`3
+R1
+w1673732303
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_10bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_10bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 PfGhZ^M;7BbVMkVI31Rin3
+!s85 0
+!s108 1673983902.256000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_10bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_10bit.v|
+!s101 -O0
+vor_16bit
+IFUB_Z3PEl<YUY:C6@2_8z3
+V@kd^bzi^i8X?bdXgi<z0X2
+R1
+w1673726619
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_16bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_16bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 lO^RgD3Z:e56^N_eRzb972
+!s85 0
+!s108 1673983900.582000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_16bit.v|
+!s101 -O0
+vor_22bit
+ILhXYLLj?Umgo>E<]ONB@Q2
+V^X?ZS=g:MEooe>kLIJ?DQ2
+R1
+w1673894867
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_22bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_22bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ;ZE1hah<5;8LmC6KC9N7c1
+!s85 0
+!s108 1673983902.321000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_22bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_22bit.v|
+!s101 -O0
+vor_4bit
+IYGnlDdRFHLI4D81KagFPR1
+V`f`=:[IY<FmBoXl?bT45S0
+R1
+w1673732228
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_4bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_4bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _WF:?U<8eIBn9j@Fd65dK1
+!s85 0
+!s108 1673983902.099000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_4bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_4bit.v|
+!s101 -O0
+vor_6bit
+I@Q:XELn^aVUQe1]zzCbgj2
+V=iPH]71X:eiJiP_>Mdc>N1
+R1
+w1673732250
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_6bit.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_6bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 nPc::dMZOI`Rnh5a1]IAR2
+!s85 0
+!s108 1673983902.179000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_6bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_6bit.v|
+!s101 -O0
+vregister_memory
+I1fmg?:VGf==YkbeRc]1oi2
+V[h]:amJ8gmJ79dU>`z^Rn0
+R1
+w1673922117
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/register_memory.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/register_memory.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Vk1J<1b;2OV2MTRbb6lR33
+!s85 0
+!s108 1673983901.752000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/register_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/cse331_project|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/register_memory.v|
+!s101 -O0
+vtb
+IQK_`;DSYCWFI]JR]_=ViF0
+VV@Xn<HnSRM[I5c1?BH]3a3
+R1
+w1673979378
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb.v
+L0 1
+R2
+r1
+31
+Z5 o-work work -O0
+!i10b 1
+!s100 1L@USU[?U]]]Fn9[6T1ZO2
+!s85 0
+!s108 1673983917.128000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb.v|
+!s101 -O0
+vtb2
+I?d0Lo_lB^mL4F`=Ff__9d0
+VSF1BmRWJnEIkY8K83bYAd3
+R1
+w1673980441
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb2.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb2.v
+L0 1
+R2
+r1
+31
+R5
+!i10b 1
+!s100 CPQ4BjAX@WjH8efneeg=B3
+!s85 0
+!s108 1673984640.768000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb2.v|
+!s90 -reportprogress|300|-work|work|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb2.v|
+!s101 -O0
+vtb3
+!i10b 1
+!s100 Ro5A`CNgE3eWMa1HI5@FI1
+IW[QJ@9^dn45hUhEI_AWe=0
+Vh968^YS8ikM[lU8_3U[2T1
+R1
+w1673980455
+8C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb3.v
+FC:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb3.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1673984640.842000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb3.v|
+!s90 -reportprogress|300|-work|work|C:/Users/emrey/OneDrive/Masaüstü/cse331_project/tb3.v|
+!s101 -O0
+R5
