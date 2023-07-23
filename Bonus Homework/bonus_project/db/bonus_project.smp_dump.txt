@@ -1,0 +1,9 @@
+
+State Machine - |main|control:c0|current_state
+Name current_state.FINAL current_state.FOURTH current_state.THIRD current_state.SECOND current_state.INIT current_state.FIRST 
+current_state.FIRST 0 0 0 0 0 0 
+current_state.INIT 0 0 0 0 1 1 
+current_state.SECOND 0 0 0 1 0 1 
+current_state.THIRD 0 0 1 0 0 1 
+current_state.FOURTH 0 1 0 0 0 1 
+current_state.FINAL 1 0 0 0 0 1 
