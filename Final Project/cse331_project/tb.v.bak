@@ -1,0 +1,39 @@
+module tb();
+
+reg clock;
+
+reg [31:0] pc;
+reg [15:0] instructions [31:0];
+reg [15:0] instruction;
+wire [31:0] newPc;
+
+initial clock = 0;
+
+initial begin
+	$readmemb("instruction.mem", instructions);
+	pc <= 0;
+	assign instruction = instructions[pc];
+end
+
+MiniMIPS processor(clock,pc,instruction,newPc);
+
+
+always begin 
+	
+		#50 clock=~clock;
+		
+end
+
+always begin
+	if(pc>32'd30)begin
+		$stop;
+	end
+	#100
+	pc <= newPc;
+	instruction<= instructions[pc];
+																																																																							
+	$display("Instruction: %16b, Rsaddr: %3b, Rtaddr: %3b, Rdaddr: %3b, ALURes: %32b, $Rs: %32b, $Rt: %32b,PC : %32b, regw:%1b, memtoReg:%1b, mr:%1b, mw:%1b, branch:%1b, aluSrc:%1b, aluop:%5b,opcode:%5b,regdest:%5b,branch not :%2b,clock :%d",processor.instruction,processor.rsAddress,processor.rtAddress,processor.rdAddress,processor.aluOutput,processor.rs,processor.rt,processor.pc,processor.regw,processor.memtoreg,processor.mr,processor.mw,processor.branch,processor.alusrc,processor.aluop,processor.opcode,processor.regdest,processor.branch_not,processor.clock);
+
+end
+
+endmodule

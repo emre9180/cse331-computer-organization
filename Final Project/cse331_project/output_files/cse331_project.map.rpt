@@ -1,0 +1,987 @@
+Analysis & Synthesis report for cse331_project
+Tue Jan 17 22:56:40 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for main_memory:mem1|altsyncram:memdata_rtl_0|altsyncram_o0e1:auto_generated
+ 14. Parameter Settings for Inferred Entity Instance: main_memory:mem1|altsyncram:memdata_rtl_0
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "register_memory:register2"
+ 17. Port Connectivity Checks: "adder_32bit:add2"
+ 18. Port Connectivity Checks: "adder_32bit:add1"
+ 19. Port Connectivity Checks: "alu:alu1|adder_16bit:adder2"
+ 20. Port Connectivity Checks: "alu:alu1|adder_16bit:adder1"
+ 21. Port Connectivity Checks: "alu:alu1|adder_16bit:adder0"
+ 22. Port Connectivity Checks: "or_10bit:or12"
+ 23. Port Connectivity Checks: "or_22bit:or11"
+ 24. Port Connectivity Checks: "or_16bit:or10"
+ 25. Port Connectivity Checks: "or_16bit:or9"
+ 26. Port Connectivity Checks: "or_10bit:or8"
+ 27. Port Connectivity Checks: "or_16bit:or7"
+ 28. Port Connectivity Checks: "or_6bit:or6"
+ 29. Port Connectivity Checks: "or_4bit:or5"
+ 30. Port Connectivity Checks: "or_4bit:or4"
+ 31. Port Connectivity Checks: "or_4bit:or3"
+ 32. Port Connectivity Checks: "or_4bit:or2"
+ 33. Port Connectivity Checks: "or_6bit:or1"
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jan 17 22:56:39 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; cse331_project                             ;
+; Top-level Entity Name              ; mips                                       ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 1,076                                      ;
+;     Total combinational functions  ; 836                                        ;
+;     Dedicated logic registers      ; 256                                        ;
+; Total registers                    ; 256                                        ;
+; Total pins                         ; 97                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 4,096                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; mips               ; cse331_project     ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; or_16bit.v                       ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_16bit.v             ;         ;
+; not_16bit.v                      ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/not_16bit.v            ;         ;
+; and_16bit.v                      ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/and_16bit.v            ;         ;
+; mux_32bit_2x1.v                  ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_32bit_2x1.v        ;         ;
+; mux_1bit_8x3.v                   ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_8x3.v         ;         ;
+; mux_1bit_2x1.v                   ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_1bit_2x1.v         ;         ;
+; mux_16bit_2x1.v                  ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_2x1.v        ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/full_adder.v           ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/alu.v                  ;         ;
+; adder_4bit.v                     ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_4bit.v           ;         ;
+; adder_32bit.v                    ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_32bit.v          ;         ;
+; adder_16bit.v                    ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/adder_16bit.v          ;         ;
+; main_control.v                   ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_control.v         ;         ;
+; main_memory.v                    ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/main_memory.v          ;         ;
+; register_memory.v                ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/register_memory.v      ;         ;
+; mips.v                           ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mips.v                 ;         ;
+; mux_3bit_2x1.v                   ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_3bit_2x1.v         ;         ;
+; mux_16bit_8x3.v                  ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/mux_16bit_8x3.v        ;         ;
+; or_4bit.v                        ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_4bit.v              ;         ;
+; or_6bit.v                        ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_6bit.v              ;         ;
+; or_10bit.v                       ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_10bit.v             ;         ;
+; or_22bit.v                       ; yes             ; User Verilog HDL File        ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/or_22bit.v             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_o0e1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/emrey/OneDrive/Masaüstü/cse331_project/db/altsyncram_o0e1.tdf ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 97               ;
+; Total memory bits        ; 4096             ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; clock~input      ;
+; Maximum fan-out          ; 272              ;
+; Total fan-out            ; 4235             ;
+; Average fan-out          ; 3.25             ;
++--------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+; |mips                                     ; 836 (0)           ; 256 (0)      ; 4096        ; 0            ; 0       ; 0         ; 0         ; 97   ; 0            ; |mips                                                                          ; work         ;
+;    |adder_32bit:add1|                     ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1                                                         ; work         ;
+;       |adder_16bit:adder1|                ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1                                      ; work         ;
+;          |adder_4bit:adder1|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder1                    ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder1|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder1|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder1|full_adder:full4   ; work         ;
+;          |adder_4bit:adder2|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder2                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full4   ; work         ;
+;          |adder_4bit:adder3|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder3                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full4   ; work         ;
+;          |adder_4bit:adder4|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder4                    ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full4   ; work         ;
+;       |adder_16bit:adder2|                ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2                                      ; work         ;
+;          |adder_4bit:adder1|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder1                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full4   ; work         ;
+;          |adder_4bit:adder2|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder2                    ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full4   ; work         ;
+;          |adder_4bit:adder3|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder3                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full4   ; work         ;
+;          |adder_4bit:adder4|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder4                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full2   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full4   ; work         ;
+;    |adder_32bit:add2|                     ; 42 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2                                                         ; work         ;
+;       |adder_16bit:adder1|                ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1                                      ; work         ;
+;          |adder_4bit:adder1|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder1                    ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder1|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder1|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder1|full_adder:full4   ; work         ;
+;          |adder_4bit:adder2|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder2                    ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder2|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder2|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder2|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder2|full_adder:full4   ; work         ;
+;          |adder_4bit:adder3|              ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder3                    ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder3|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder3|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder3|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder3|full_adder:full4   ; work         ;
+;          |adder_4bit:adder4|              ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder4                    ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder4|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder4|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder4|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder1|adder_4bit:adder4|full_adder:full4   ; work         ;
+;       |adder_16bit:adder2|                ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2                                      ; work         ;
+;          |adder_4bit:adder1|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder1                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder1|full_adder:full1   ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder1|full_adder:full3   ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder1|full_adder:full4   ; work         ;
+;          |adder_4bit:adder2|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder2                    ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder2|full_adder:full2   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder2|full_adder:full3   ; work         ;
+;          |adder_4bit:adder3|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder3                    ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder3|full_adder:full1   ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder3|full_adder:full2   ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder3|full_adder:full4   ; work         ;
+;          |adder_4bit:adder4|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder4                    ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder4|full_adder:full1   ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|adder_32bit:add2|adder_16bit:adder2|adder_4bit:adder4|full_adder:full3   ; work         ;
+;    |alu:alu1|                             ; 232 (85)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1                                                                 ; work         ;
+;       |adder_16bit:adder0|                ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0                                              ; work         ;
+;          |adder_4bit:adder1|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder1                            ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder1|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder1|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder1|full_adder:full4           ; work         ;
+;          |adder_4bit:adder2|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder2                            ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder2|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder2|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder2|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder2|full_adder:full4           ; work         ;
+;          |adder_4bit:adder3|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder3                            ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder3|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder3|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder3|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder3|full_adder:full4           ; work         ;
+;          |adder_4bit:adder4|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder4                            ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder4|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder0|adder_4bit:adder4|full_adder:full2           ; work         ;
+;       |adder_16bit:adder1|                ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1                                              ; work         ;
+;          |adder_4bit:adder1|              ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder1                            ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder1|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder1|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder1|full_adder:full4           ; work         ;
+;          |adder_4bit:adder2|              ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder2                            ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder2|full_adder:full4           ; work         ;
+;          |adder_4bit:adder3|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder3                            ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder3|full_adder:full3           ; work         ;
+;          |adder_4bit:adder4|              ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder4                            ; work         ;
+;             |full_adder:full1|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder1|adder_4bit:adder4|full_adder:full4           ; work         ;
+;       |adder_16bit:adder2|                ; 31 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2                                              ; work         ;
+;          |adder_4bit:adder1|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder1                            ; work         ;
+;             |full_adder:full1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder1|full_adder:full4           ; work         ;
+;          |adder_4bit:adder2|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder2                            ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder2|full_adder:full4           ; work         ;
+;          |adder_4bit:adder3|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder3                            ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder3|full_adder:full4           ; work         ;
+;          |adder_4bit:adder4|              ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder4                            ; work         ;
+;             |full_adder:full1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full1           ; work         ;
+;             |full_adder:full2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full2           ; work         ;
+;             |full_adder:full3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full3           ; work         ;
+;             |full_adder:full4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|adder_16bit:adder2|adder_4bit:adder4|full_adder:full4           ; work         ;
+;       |mux_16bit_8x3:mux3|                ; 67 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3                                              ; work         ;
+;          |mux_1bit_8x3:mux11|             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux11                           ; work         ;
+;          |mux_1bit_8x3:mux12|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux12                           ; work         ;
+;          |mux_1bit_8x3:mux1|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux1                            ; work         ;
+;          |mux_1bit_8x3:mux2|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux2                            ; work         ;
+;          |mux_1bit_8x3:mux3|              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux3                            ; work         ;
+;          |mux_1bit_8x3:mux4|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux4                            ; work         ;
+;          |mux_1bit_8x3:mux5|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux5                            ; work         ;
+;          |mux_1bit_8x3:mux6|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux6                            ; work         ;
+;          |mux_1bit_8x3:mux7|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux7                            ; work         ;
+;          |mux_1bit_8x3:mux8|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux8                            ; work         ;
+;    |main_control:c11|                     ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|main_control:c11                                                         ; work         ;
+;    |main_memory:mem1|                     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|main_memory:mem1                                                         ; work         ;
+;       |altsyncram:memdata_rtl_0|          ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|main_memory:mem1|altsyncram:memdata_rtl_0                                ; work         ;
+;          |altsyncram_o0e1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|main_memory:mem1|altsyncram:memdata_rtl_0|altsyncram_o0e1:auto_generated ; work         ;
+;    |mux_16bit_2x1:c7|                     ; 55 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7                                                         ; work         ;
+;       |mux_1bit_2x1:mux10|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux10                                      ; work         ;
+;       |mux_1bit_2x1:mux11|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux11                                      ; work         ;
+;       |mux_1bit_2x1:mux12|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux12                                      ; work         ;
+;       |mux_1bit_2x1:mux13|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux13                                      ; work         ;
+;       |mux_1bit_2x1:mux14|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux14                                      ; work         ;
+;       |mux_1bit_2x1:mux15|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux15                                      ; work         ;
+;       |mux_1bit_2x1:mux16|                ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux16                                      ; work         ;
+;       |mux_1bit_2x1:mux1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux1                                       ; work         ;
+;       |mux_1bit_2x1:mux2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux2                                       ; work         ;
+;       |mux_1bit_2x1:mux3|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux3                                       ; work         ;
+;       |mux_1bit_2x1:mux4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux4                                       ; work         ;
+;       |mux_1bit_2x1:mux5|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux5                                       ; work         ;
+;       |mux_1bit_2x1:mux6|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux6                                       ; work         ;
+;       |mux_1bit_2x1:mux7|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux7                                       ; work         ;
+;       |mux_1bit_2x1:mux8|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux8                                       ; work         ;
+;       |mux_1bit_2x1:mux9|                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:c7|mux_1bit_2x1:mux9                                       ; work         ;
+;    |mux_16bit_2x1:mux2|                   ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2                                                       ; work         ;
+;       |mux_1bit_2x1:mux10|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux10                                    ; work         ;
+;       |mux_1bit_2x1:mux11|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux11                                    ; work         ;
+;       |mux_1bit_2x1:mux12|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux12                                    ; work         ;
+;       |mux_1bit_2x1:mux13|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux13                                    ; work         ;
+;       |mux_1bit_2x1:mux14|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux14                                    ; work         ;
+;       |mux_1bit_2x1:mux15|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux15                                    ; work         ;
+;       |mux_1bit_2x1:mux16|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux16                                    ; work         ;
+;       |mux_1bit_2x1:mux1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux1                                     ; work         ;
+;       |mux_1bit_2x1:mux2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux2                                     ; work         ;
+;       |mux_1bit_2x1:mux3|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux3                                     ; work         ;
+;       |mux_1bit_2x1:mux4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux4                                     ; work         ;
+;       |mux_1bit_2x1:mux5|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux5                                     ; work         ;
+;       |mux_1bit_2x1:mux6|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux6                                     ; work         ;
+;       |mux_1bit_2x1:mux7|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux7                                     ; work         ;
+;       |mux_1bit_2x1:mux8|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux8                                     ; work         ;
+;       |mux_1bit_2x1:mux9|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_16bit_2x1:mux2|mux_1bit_2x1:mux9                                     ; work         ;
+;    |mux_32bit_2x1:mx1|                    ; 53 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1                                                        ; work         ;
+;       |mux_16bit_2x1:m1|                  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1                                       ; work         ;
+;          |mux_1bit_2x1:mux10|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux10                    ; work         ;
+;          |mux_1bit_2x1:mux11|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux11                    ; work         ;
+;          |mux_1bit_2x1:mux12|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux12                    ; work         ;
+;          |mux_1bit_2x1:mux13|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux13                    ; work         ;
+;          |mux_1bit_2x1:mux14|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux14                    ; work         ;
+;          |mux_1bit_2x1:mux15|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux15                    ; work         ;
+;          |mux_1bit_2x1:mux16|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux16                    ; work         ;
+;          |mux_1bit_2x1:mux1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux1                     ; work         ;
+;          |mux_1bit_2x1:mux2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux2                     ; work         ;
+;          |mux_1bit_2x1:mux3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux3                     ; work         ;
+;          |mux_1bit_2x1:mux4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux4                     ; work         ;
+;          |mux_1bit_2x1:mux5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux5                     ; work         ;
+;          |mux_1bit_2x1:mux6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux6                     ; work         ;
+;          |mux_1bit_2x1:mux7|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux7                     ; work         ;
+;          |mux_1bit_2x1:mux8|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux8                     ; work         ;
+;          |mux_1bit_2x1:mux9|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m1|mux_1bit_2x1:mux9                     ; work         ;
+;       |mux_16bit_2x1:m2|                  ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2                                       ; work         ;
+;          |mux_1bit_2x1:mux10|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux10                    ; work         ;
+;          |mux_1bit_2x1:mux11|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux11                    ; work         ;
+;          |mux_1bit_2x1:mux12|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux12                    ; work         ;
+;          |mux_1bit_2x1:mux13|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux13                    ; work         ;
+;          |mux_1bit_2x1:mux14|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux14                    ; work         ;
+;          |mux_1bit_2x1:mux15|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux15                    ; work         ;
+;          |mux_1bit_2x1:mux16|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux16                    ; work         ;
+;          |mux_1bit_2x1:mux1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux1                     ; work         ;
+;          |mux_1bit_2x1:mux2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux2                     ; work         ;
+;          |mux_1bit_2x1:mux3|              ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux3                     ; work         ;
+;          |mux_1bit_2x1:mux4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux4                     ; work         ;
+;          |mux_1bit_2x1:mux5|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux5                     ; work         ;
+;          |mux_1bit_2x1:mux6|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux6                     ; work         ;
+;          |mux_1bit_2x1:mux7|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux7                     ; work         ;
+;          |mux_1bit_2x1:mux8|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux8                     ; work         ;
+;          |mux_1bit_2x1:mux9|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux9                     ; work         ;
+;    |mux_3bit_2x1:mux1|                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_3bit_2x1:mux1                                                        ; work         ;
+;       |mux_1bit_2x1:mux1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_3bit_2x1:mux1|mux_1bit_2x1:mux1                                      ; work         ;
+;       |mux_1bit_2x1:mux2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_3bit_2x1:mux1|mux_1bit_2x1:mux2                                      ; work         ;
+;       |mux_1bit_2x1:mux3|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_3bit_2x1:mux1|mux_1bit_2x1:mux3                                      ; work         ;
+;       |mux_1bit_2x1:mux4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|mux_3bit_2x1:mux1|mux_1bit_2x1:mux4                                      ; work         ;
+;    |register_memory:reg1|                 ; 352 (352)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|register_memory:reg1                                                     ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                        ;
++-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; main_memory:mem1|altsyncram:memdata_rtl_0|altsyncram_o0e1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
++-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++----------------------------------------------------+----------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal        ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------+------------------------+
+; main_control:c11|jump                              ; main_control:c11|WideOr8   ; yes                    ;
+; main_control:c11|branch_equal                      ; main_control:c11|WideOr5   ; yes                    ;
+; main_control:c11|branch_not                        ; main_control:c11|WideOr5   ; yes                    ;
+; main_control:c11|ALUCtr[1]                         ; GND                        ; yes                    ;
+; main_control:c11|ALUCtr[0]                         ; main_control:c11|ALUCtr[1] ; yes                    ;
+; main_control:c11|ALUCtr[2]                         ; main_control:c11|ALUCtr[1] ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                            ;                        ;
++----------------------------------------------------+----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 256   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                             ;
++----------------------------------+--------------------------------+------+
+; Register Name                    ; Megafunction                   ; Type ;
++----------------------------------+--------------------------------+------+
+; main_memory:mem1|readData[0..15] ; main_memory:mem1|memdata_rtl_0 ; RAM  ;
++----------------------------------+--------------------------------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |mips|alu:alu1|ShiftLeft0                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |mips|alu:alu1|ShiftRight0                                      ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux12|out ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |mips|mux_32bit_2x1:mx1|mux_16bit_2x1:m2|mux_1bit_2x1:mux3|out  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |mips|alu:alu1|ShiftLeft0                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Source assignments for main_memory:mem1|altsyncram:memdata_rtl_0|altsyncram_o0e1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------+
+; Assignment                      ; Value              ; From ; To                                ;
++---------------------------------+--------------------+------+-----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                 ;
++---------------------------------+--------------------+------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: main_memory:mem1|altsyncram:memdata_rtl_0 ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                        ;
+; WIDTH_A                            ; 16                   ; Untyped                        ;
+; WIDTHAD_A                          ; 8                    ; Untyped                        ;
+; NUMWORDS_A                         ; 256                  ; Untyped                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 16                   ; Untyped                        ;
+; WIDTHAD_B                          ; 8                    ; Untyped                        ;
+; NUMWORDS_B                         ; 256                  ; Untyped                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_o0e1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                      ;
++-------------------------------------------+-------------------------------------------+
+; Name                                      ; Value                                     ;
++-------------------------------------------+-------------------------------------------+
+; Number of entity instances                ; 1                                         ;
+; Entity Instance                           ; main_memory:mem1|altsyncram:memdata_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                 ;
+;     -- WIDTH_A                            ; 16                                        ;
+;     -- NUMWORDS_A                         ; 256                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                              ;
+;     -- WIDTH_B                            ; 16                                        ;
+;     -- NUMWORDS_B                         ; 256                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                 ;
++-------------------------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_memory:register2"                                                                ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; read_data1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; read_data2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "adder_32bit:add2" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; Cin  ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_32bit:add1"                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; B[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu1|adder_16bit:adder2" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu1|adder_16bit:adder1" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu1|adder_16bit:adder0"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; B[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "or_10bit:or12" ;
++--------+-------+----------+---------------+
+; Port   ; Type  ; Severity ; Details       ;
++--------+-------+----------+---------------+
+; input1 ; Input ; Info     ; Stuck at GND  ;
++--------+-------+----------+---------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "or_22bit:or11" ;
++--------+-------+----------+---------------+
+; Port   ; Type  ; Severity ; Details       ;
++--------+-------+----------+---------------+
+; input1 ; Input ; Info     ; Stuck at GND  ;
+; input2 ; Input ; Info     ; Stuck at GND  ;
++--------+-------+----------+---------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "or_16bit:or10" ;
++--------+-------+----------+---------------+
+; Port   ; Type  ; Severity ; Details       ;
++--------+-------+----------+---------------+
+; input1 ; Input ; Info     ; Stuck at GND  ;
++--------+-------+----------+---------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_16bit:or9" ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input1 ; Input ; Info     ; Stuck at GND ;
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_10bit:or8" ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_16bit:or7" ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_6bit:or6"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_4bit:or5"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_4bit:or4"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_4bit:or3"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_4bit:or2"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "or_6bit:or1"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; input2 ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Jan 17 22:56:29 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cse331_project -c cse331_project
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file xor_16bit.v
+    Info (12023): Found entity 1: xor_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file or_16bit.v
+    Info (12023): Found entity 1: or_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file not_16bit.v
+    Info (12023): Found entity 1: not_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file nor_16bit.v
+    Info (12023): Found entity 1: nor_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file and_16bit.v
+    Info (12023): Found entity 1: and_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file mux_64bit_2x1.v
+    Info (12023): Found entity 1: mux_64bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_32bit_8x3.v
+    Info (12023): Found entity 1: mux_32bit_8x3
+Info (12021): Found 1 design units, including 1 entities, in source file mux_32bit_2x1.v
+    Info (12023): Found entity 1: mux_32bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_1bit_8x3.v
+    Info (12023): Found entity 1: mux_1bit_8x3
+Info (12021): Found 1 design units, including 1 entities, in source file mux_1bit_2x1.v
+    Info (12023): Found entity 1: mux_1bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_16bit_2x1.v
+    Info (12023): Found entity 1: mux_16bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
+    Info (12023): Found entity 1: multiplier
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder.v
+    Info (12023): Found entity 1: full_adder
+Warning (10090): Verilog HDL syntax warning at datapath.v(13): extra block comment delimiter characters /* within block comment
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: controller
+Warning (12019): Can't analyze file -- file and_32bit.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu
+Info (12021): Found 1 design units, including 1 entities, in source file adder_4bit.v
+    Info (12023): Found entity 1: adder_4bit
+Info (12021): Found 1 design units, including 1 entities, in source file adder_32bit.v
+    Info (12023): Found entity 1: adder_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file adder_16bit.v
+    Info (12023): Found entity 1: adder_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file main_control.v
+    Info (12023): Found entity 1: main_control
+Info (12021): Found 1 design units, including 1 entities, in source file main_memory.v
+    Info (12023): Found entity 1: main_memory
+Info (12021): Found 1 design units, including 1 entities, in source file register_memory.v
+    Info (12023): Found entity 1: register_memory
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: tb
+Info (12021): Found 1 design units, including 1 entities, in source file mips.v
+    Info (12023): Found entity 1: mips
+Info (12021): Found 1 design units, including 1 entities, in source file mux_3bit_2x1.v
+    Info (12023): Found entity 1: mux_3bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_16bit_8x3.v
+    Info (12023): Found entity 1: mux_16bit_8x3
+Info (12021): Found 1 design units, including 1 entities, in source file or_4bit.v
+    Info (12023): Found entity 1: or_4bit
+Info (12021): Found 1 design units, including 1 entities, in source file or_6bit.v
+    Info (12023): Found entity 1: or_6bit
+Info (12021): Found 1 design units, including 1 entities, in source file or_10bit.v
+    Info (12023): Found entity 1: or_10bit
+Info (12021): Found 1 design units, including 1 entities, in source file or_22bit.v
+    Info (12023): Found entity 1: or_22bit
+Info (12021): Found 1 design units, including 1 entities, in source file tb2.v
+    Info (12023): Found entity 1: tb2
+Info (12021): Found 1 design units, including 1 entities, in source file tb3.v
+    Info (12023): Found entity 1: tb3
+Warning (10236): Verilog HDL Implicit Net warning at multiplier.v(24): created implicit net for "reset"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier.v(24): created implicit net for "write"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier.v(24): created implicit net for "shft"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier.v(24): created implicit net for "add"
+Warning (10236): Verilog HDL Implicit Net warning at mips.v(86): created implicit net for "jump"
+Warning (10236): Verilog HDL Implicit Net warning at mips.v(92): created implicit net for "clk"
+Info (12127): Elaborating entity "mips" for the top level hierarchy
+Info (12128): Elaborating entity "or_6bit" for hierarchy "or_6bit:or1"
+Info (12128): Elaborating entity "or_4bit" for hierarchy "or_4bit:or2"
+Info (12128): Elaborating entity "or_16bit" for hierarchy "or_16bit:or7"
+Info (12128): Elaborating entity "or_10bit" for hierarchy "or_10bit:or8"
+Info (12128): Elaborating entity "or_22bit" for hierarchy "or_22bit:or11"
+Info (12128): Elaborating entity "main_control" for hierarchy "main_control:c11"
+Warning (10240): Verilog HDL Always Construct warning at main_control.v(20): inferring latch(es) for variable "ALUCtr", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at main_control.v(20): inferring latch(es) for variable "branch_equal", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at main_control.v(20): inferring latch(es) for variable "branch_not", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at main_control.v(20): inferring latch(es) for variable "jump", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "jump" at main_control.v(20)
+Info (10041): Inferred latch for "branch_not" at main_control.v(20)
+Info (10041): Inferred latch for "branch_equal" at main_control.v(20)
+Info (10041): Inferred latch for "ALUCtr[0]" at main_control.v(20)
+Info (10041): Inferred latch for "ALUCtr[1]" at main_control.v(20)
+Info (10041): Inferred latch for "ALUCtr[2]" at main_control.v(20)
+Info (12128): Elaborating entity "mux_3bit_2x1" for hierarchy "mux_3bit_2x1:mux1"
+Info (12128): Elaborating entity "mux_1bit_2x1" for hierarchy "mux_3bit_2x1:mux1|mux_1bit_2x1:mux1"
+Info (12128): Elaborating entity "main_memory" for hierarchy "main_memory:mem1"
+Info (12128): Elaborating entity "register_memory" for hierarchy "register_memory:reg1"
+Info (12128): Elaborating entity "mux_16bit_2x1" for hierarchy "mux_16bit_2x1:mux2"
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1"
+Info (12128): Elaborating entity "not_16bit" for hierarchy "alu:alu1|not_16bit:not1"
+Info (12128): Elaborating entity "adder_16bit" for hierarchy "alu:alu1|adder_16bit:adder0"
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "alu:alu1|adder_16bit:adder0|adder_4bit:adder1"
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu:alu1|adder_16bit:adder0|adder_4bit:adder1|full_adder:full1"
+Info (12128): Elaborating entity "and_16bit" for hierarchy "alu:alu1|and_16bit:and2"
+Info (12128): Elaborating entity "mux_16bit_8x3" for hierarchy "alu:alu1|mux_16bit_8x3:mux3"
+Info (12128): Elaborating entity "mux_1bit_8x3" for hierarchy "alu:alu1|mux_16bit_8x3:mux3|mux_1bit_8x3:mux1"
+Info (12128): Elaborating entity "adder_32bit" for hierarchy "adder_32bit:add1"
+Info (12128): Elaborating entity "mux_32bit_2x1" for hierarchy "mux_32bit_2x1:mx2"
+Warning (276027): Inferred dual-clock RAM node "main_memory:mem1|memdata_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "register_memory:reg1|registers" is uninferred due to asynchronous read logic
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "main_memory:mem1|memdata_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "main_memory:mem1|altsyncram:memdata_rtl_0"
+Info (12133): Instantiated megafunction "main_memory:mem1|altsyncram:memdata_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o0e1.tdf
+    Info (12023): Found entity 1: altsyncram_o0e1
+Warning (13012): Latch main_control:c11|jump has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction[28]
+Warning (13012): Latch main_control:c11|branch_equal has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction[26]
+Warning (13012): Latch main_control:c11|branch_not has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction[26]
+Warning (13012): Latch main_control:c11|ALUCtr[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction[27]
+Warning (13012): Latch main_control:c11|ALUCtr[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction[27]
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "instruction[0]"
+    Warning (15610): No output dependent on input pin "instruction[1]"
+Info (21057): Implemented 1205 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 65 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 1092 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4695 megabytes
+    Info: Processing ended: Tue Jan 17 22:56:40 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:05
+
+

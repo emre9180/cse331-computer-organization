@@ -1,0 +1,20 @@
+module main_memory(
+	input [31:0] address,
+	input [31:0] writeData,
+	output reg [31:0]	readData,
+	input mem_read,
+	input mem_write
+);
+
+reg [31:0]memdata [255:0];
+always @(*) begin
+	if (mem_read) begin
+		readData <=memdata[address];
+	end
+	
+	if (mem_write) begin
+		memdata[address] <= writeData[31:0];
+	end
+end
+
+endmodule

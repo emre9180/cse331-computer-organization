@@ -1,0 +1,142 @@
+module mips(
+	input clock,
+	input [31:0] pc,
+	input [15:0] instruction,
+	output [31:0] newPc
+);
+wire [31:0] extendedNum,shiftedNum,pcPlusFour;
+wire [31:0] aluInput2,aluOutput;
+wire [31:0] rs,rt;
+wire alusrc,memtoreg,mr,mw,branch,signExtended;
+wire [31:0] outputx,branchAddress;
+wire Rtype;
+wire [31:0] memoryOutput;
+wire [2:0] aluControl;
+wire [2:0] aluop;
+wire [2:0] rsAddress,rtAddress,rdAddress;
+wire [3:0] opcode;
+wire [2:0] func;
+wire I0,I1,I2,I3,I4,I5;
+wire [5:0] immediate;
+wire zero,cout,cout1;
+wire [2:0] reg_write_address;
+wire [31:0] branch_address,temp_address;
+wire temp1,temp2,temp3;
+wire [31:0] reg_write_data;
+wire regw,regdest,branch_not,zero_not;
+wire [31:0] rstemp,rttemp;
+
+
+not (I0,opcode[0]);
+not (I1,opcode[1]);
+not (I2,opcode[2]);
+not (I3,opcode[3]);
+
+and (Rtype,I0,I1,I2,I3);
+or (opcode[3],instruction[15],1'b0);
+or (opcode[2],instruction[14],1'b0);
+or (opcode[1],instruction[13],1'b0);
+or (opcode[0],instruction[12],1'b0);
+
+
+or (rsAddress[2],instruction[11],1'b0);
+or (rsAddress[1],instruction[10],1'b0);
+or (rsAddress[0],instruction[9],1'b0);
+
+
+or (rtAddress[2],instruction[8],1'b0);
+or (rtAddress[1],instruction[7],1'b0);
+or (rtAddress[0],instruction[6],1'b0);
+
+or (rdAddress[2],instruction[5],1'b0);
+or (rdAddress[1],instruction[4],1'b0);
+or (rdAddress[0],instruction[3],1'b0);
+
+or (func[2],instruction[2],1'b0);
+or (func[1],instruction[1],1'b0);
+or (func[0],instruction[0],1'b0);
+
+
+or (immediate[5],instruction[5],1'b0);
+or (immediate[4],instruction[4],1'b0);
+or (immediate[3],instruction[3],1'b0);
+or (immediate[2],instruction[2],1'b0);
+or (immediate[1],instruction[1],1'b0);
+or (immediate[0],instruction[0],1'b0);
+
+
+or (branchAddress[31],1'b0,1'b0);
+or (branchAddress[30],1'b0,1'b0);
+or (branchAddress[29],1'b0,1'b0);
+or (branchAddress[28],1'b0,1'b0);
+or (branchAddress[27],1'b0,1'b0);
+or (branchAddress[26],1'b0,1'b0);
+or (branchAddress[25],1'b0,1'b0);
+or (branchAddress[24],1'b0,1'b0);
+or (branchAddress[23],1'b0,1'b0);
+or (branchAddress[22],1'b0,1'b0);
+or (branchAddress[21],1'b0,1'b0);
+or (branchAddress[20],1'b0,1'b0);
+or (branchAddress[19],1'b0,1'b0);
+or (branchAddress[18],1'b0,1'b0);
+or (branchAddress[17],1'b0,1'b0);
+or (branchAddress[16],1'b0,1'b0);
+or (branchAddress[15],1'b0,1'b0);
+or (branchAddress[14],1'b0,1'b0);
+or (branchAddress[13],1'b0,1'b0);
+or (branchAddress[12],1'b0,1'b0);
+or (branchAddress[11],1'b0,1'b0);
+or (branchAddress[10],1'b0,1'b0);
+or (branchAddress[9],1'b0,1'b0);
+or (branchAddress[8],1'b0,1'b0);
+
+or (branchAddress[7],1'b0,1'b0);
+or (branchAddress[6],1'b0,1'b0);
+or (branchAddress[5],instruction[5],1'b0);
+or (branchAddress[4],instruction[4],1'b0);
+or (branchAddress[3],instruction[3],1'b0);
+or (branchAddress[2],instruction[2],1'b0);
+or (branchAddress[1],instruction[1],1'b0);
+or (branchAddress[0],instruction[0],1'b0);
+
+
+	
+control_unit c(opcode,aluop,alusrc,regw,regdest,memtoreg,mr,mw,branch,branch_not);
+
+alu_control c2(func,aluop,aluControl);
+
+mux3bit c3(rtAddress,rdAddress,reg_write_address,regdest);  //3 BIT
+
+register register1(rsAddress,rtAddress, reg_write_address ,reg_write_data,regw,rs,rt,clock);
+
+extender c4(immediate,extendedNum);
+
+mux32bit c5(rt,rt,aluInput2,alusrc);
+
+alu c6(rs,aluInput2,aluControl,aluOutput,zero);
+
+not n1(zero_not,zero);
+
+and a1(temp1,zero,branch);
+and a2(temp2,zero_not,branch_not);
+or o1(temp3,temp1,temp2);
+
+data_memory memory(aluOutput,rt,memoryOutput,mr,mw);
+
+mux32bit c7(aluOutput,rt,reg_write_data,memtoreg);
+
+shiftleft2 c8(extendedNum,shiftedNum);
+
+adder32bit c9(pc,32'd1,pcPlusFour,cout);
+
+adder32bit c11(pcPlusFour,shiftedNum,temp_address,cout1);
+
+mux32bit c22(pcPlusFour,temp_address,branch_address,temp3);
+
+assign newPc = branch_address;
+
+register register2(rsAddress,rtAddress,reg_write_address ,reg_write_data,regw,rstemp,rttemp,clock);
+
+
+
+endmodule
