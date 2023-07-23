@@ -1,0 +1,103 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\emrey\OneDrive\Masaüstü\bonus_project\simulation\modelsim
+vcontrol
+Ib9TlG[TBLnTjiNSakZ;W52
+VJD9d6]2:T1mc=GkRD]oM40
+Z1 dC:\Users\emrey\OneDrive\Masaüstü\bonus_project\simulation\modelsim
+w1673176181
+8C:/Users/emrey/OneDrive/Masaüstü/bonus_project/control.v
+FC:/Users/emrey/OneDrive/Masaüstü/bonus_project/control.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project -O0
+!i10b 1
+!s100 HCz0WfFoJmVNVFUBm<nJ@1
+!s85 0
+!s108 1673179835.344000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/bonus_project/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project|C:/Users/emrey/OneDrive/Masaüstü/bonus_project/control.v|
+!s101 -O0
+vdatapath
+ICjiflBQ0STA9JJH:NIhi>0
+VF74dXXJ4]CjfLb8BGBn`O3
+R1
+w1673176118
+8C:/Users/emrey/OneDrive/Masaüstü/bonus_project/datapath.v
+FC:/Users/emrey/OneDrive/Masaüstü/bonus_project/datapath.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 9eSAWZ0ZKUU<JH=Yih^=Y3
+!s85 0
+!s108 1673179835.301000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/bonus_project/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project|C:/Users/emrey/OneDrive/Masaüstü/bonus_project/datapath.v|
+!s101 -O0
+vmain
+I4TV6;QZ7F226ziTjlW8Z>0
+VGc6;<M>ha4RmKJNa5NI9Z3
+R1
+w1673176174
+8C:/Users/emrey/OneDrive/Masaüstü/bonus_project/main.v
+FC:/Users/emrey/OneDrive/Masaüstü/bonus_project/main.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 TnD62DI@1>jcgz5@F2e1J1
+!s85 0
+!s108 1673179835.236000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/bonus_project/main.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project|C:/Users/emrey/OneDrive/Masaüstü/bonus_project/main.v|
+!s101 -O0
+vtb
+I3kH]k63OJ4GGVi91Z14AK2
+VV@Xn<HnSRM[I5c1?BH]3a3
+R1
+w1673172342
+8C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb.v
+FC:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb.v
+L0 1
+R2
+r1
+31
+Z5 o-work work -O0
+!i10b 1
+!s100 1EVLl?XA3L>iPjF`gQT8W1
+!s85 0
+!s108 1673179849.715000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb.v|
+!s101 -O0
+vtb2
+!i10b 1
+!s100 75GIgZRei[3nK_hfY9KVi0
+ICIz<?P4_JF4@34dX[Bf<>2
+VSF1BmRWJnEIkY8K83bYAd3
+R1
+w1673128401
+8C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb2.v
+FC:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb2.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1673179849.769000
+!s107 C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb2.v|
+!s90 -reportprogress|300|-work|work|C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb2.v|
+!s101 -O0
+R5

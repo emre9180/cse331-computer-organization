@@ -1,0 +1,119 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do bonus_project_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project {C:/Users/emrey/OneDrive/Masaüstü/bonus_project/main.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project {C:/Users/emrey/OneDrive/Masaüstü/bonus_project/datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -vlog01compat -work work +incdir+C:/Users/emrey/OneDrive/Masaüstü/bonus_project {C:/Users/emrey/OneDrive/Masaüstü/bonus_project/control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+vlog -reportprogress 300 -work work C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+vlog -reportprogress 300 -work work C:/Users/emrey/OneDrive/Masaüstü/bonus_project/tb2.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb2
+# 
+# Top level modules:
+# 	tb2
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading work.main
+# Loading work.datapath
+# Loading work.control
+add wave -position insertpoint  \
+sim:/tb/temp \
+sim:/tb/reset \
+sim:/tb/read \
+sim:/tb/four_bit_input \
+sim:/tb/find \
+sim:/tb/cypher \
+sim:/tb/clock \
+sim:/tb/additionresult
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim -voptargs=+acc work.tb2
+# vsim -voptargs=+acc work.tb2 
+# Loading work.tb2
+# Loading work.main
+# Loading work.datapath
+# Loading work.control
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/tb2/temp \
+sim:/tb2/reset \
+sim:/tb2/read \
+sim:/tb2/four_bit_input \
+sim:/tb2/find \
+sim:/tb2/cypher \
+sim:/tb2/clock \
+sim:/tb2/additionresult
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
